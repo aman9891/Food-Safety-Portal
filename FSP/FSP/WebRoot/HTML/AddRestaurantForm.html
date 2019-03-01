@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+
+  	<body>
+
+  		<!-- City Manager Add Restaurant Form code starts -->
+
+  		<div class="restaurant_add_form_container">
+  			<form method="post" action="addRestaurantData" class="add_restaurant_form">
+  				<fieldset>
+    				<legend>FILL FORM TO ADD RESTAURANT</legend>
+
+    				<div id="addRestaurantFormAlertSuccess" class="alert alert-success hide">
+  						<a class="close">×</a>
+          				<strong>Restaurant Data Added Successfully</strong>
+					</div>
+
+					<div id="addRestaurantFormAlertDupError" class="alert alert-error hide">
+    	   				<a class="close">×</a>
+        				<strong>Registration Number Already Exists. Please check</strong>
+					</div>
+
+    	    		<div id="addRestaurantFormAlertTechError" class="alert alert-error hide">
+    	    			<a class="close">×</a>
+        				<strong>Technical Error! Please try after some time</strong>
+					</div>
+
+    				<label class="add_rest_label">
+               			<span class="add_rest_span">Enter Registration Number <span class="asterisk">*</span></span> :
+    					<input
+    						type="text"
+    						name="rest_reg_number"
+               				placeholder="Restaurant Registration Number"
+               				required
+             			>
+               		</label>
+
+                	<label class="add_rest_label">
+               			<span class="add_rest_span">Enter Restaurant Name <span class="asterisk">*</span></span> :
+    					<input
+	    					type="text"
+    						name="rest_name"
+            	    		placeholder="Restaurant Name"
+                			required
+               			>
+             		</label>
+
+                	<label class="add_rest_cm_label">
+                		<span class="add_rest_cm_span">Enter Restaurant Owner's Name <span class="asterisk">*</span></span> :
+                		<input
+    						type="text"
+    						name="rest_owner_name"
+               				placeholder="Restaurant Owner's Name"
+            				required
+                		>
+                	</label>
+
+                	<label class="add_rest_cm_label">
+               			<span class="add_rest_cm_span">Enter Restaurant Owner's Contact Number <span class="asterisk">*</span></span> :
+    					<input
+   							type="tel"
+    						name="rest_owner_contact_number"
+    	            		pattern="[0-9]{10}"
+        	      			placeholder="Owner's Contact Number"
+            	    		required
+                		>
+                	</label><br><br><br><br>
+
+                	<label class="add_rest_cm_label">
+               			<span class="add_rest_cm_span">Enter Restaurant Manager's Name <span class="asterisk">*</span></span> :
+    					<input
+   							type="text"
+    						name="rest_manager_name"
+               				placeholder="Restaurant Manager's Name"
+             				required
+                		>
+                	</label>
+
+                	<label class="add_rest_cm_label">
+               			<span class="add_rest_cm_span">Enter Restaurant Manager's Contact Number <span class="asterisk">*</span></span> :
+    					<input
+    						type="tel"
+    						name="rest_manager_contact_number"
+                			pattern="[0-9]{10}"
+                			placeholder="Manager's Contact Number"
+                			required
+                		>
+                	</label><br><br><br><br>
+
+                	<label class="add_rest_cm_label">
+                		<span class="add_rest_cm_span">Enter Restaurant Address <span class="asterisk">*</span></span> :
+    					<input
+    						type="text"
+    						name="rest_address"
+                			placeholder="Restaurant Address"
+                			required
+                		>
+                	</label>
+
+                	<label class="add_rest_cm_label">
+                		<span class="add_rest_cm_span">Enter Locality <span class="asterisk">*</span></span> :
+    					<input
+    						type="text"
+    						name="rest_locality"
+                			placeholder="Restaurant Locality"
+                			required
+                		>
+                	</label>
+
+                	<label class="add_rest_cm_label">
+                		<span class="add_rest_cm_span">Enter City <span class="asterisk">*</span></span> :
+    					<input
+    						type="text"
+    						name="rest_city"
+                			placeholder="Restaurant City"
+                			required
+                		>
+                	</label><br><br><br><br>
+
+                	<label class="add_rest_label">
+                		<span class="add_rest_span">Enter Website of Restaurant </span> :
+    					<input
+    						type="url"
+							name="rest_url"
+							placeholder="Website URL of Restaurant"
+               			>
+               		</label>
+
+                	<label class="add_rest_label">
+                		<span class="add_rest_span">Enter Restaurant Timings <span class="asterisk">*</span></span> :
+                	</label>
+
+                	<select name="rest_opening_timings">
+    					<option value="" disabled selected>Opening Timings</option>
+  						<option value="1">1</option>
+  						<option value="2">2</option>
+  						<option value="3">3</option>
+  						<option value="4">4</option>
+  						<option value="5">5</option>
+  						<option value="6">6</option>
+  						<option value="7">7</option>
+  						<option value="8">8</option>
+  						<option value="9">9</option>
+  						<option value="10">10</option>
+  						<option value="11">11</option>
+  						<option value="12">12</option>
+					</select>
+
+					<select name="rest_opening_abbr">
+  						<option value="AM">AM</option>
+  						<option value="PM">PM</option>
+					</select>
+
+					<span style="font-size: 17px; margin-left: 20px; margin-right: 20px;"> to </span>
+
+					<select name="rest_closing_timings">
+						<option value="" disabled selected>Closing Timings</option>
+  						<option value="1">1</option>
+  						<option value="2">2</option>
+  						<option value="3">3</option>
+  						<option value="4">4</option>
+  						<option value="5">5</option>
+  						<option value="6">6</option>
+  						<option value="7">7</option>
+  						<option value="8">8</option>
+  						<option value="9">9</option>
+  						<option value="10">10</option>
+  						<option value="11">11</option>
+  						<option value="12">12</option>
+					</select>
+
+					<select name="rest_closing_abbr">
+  						<option value="AM">AM</option>
+  						<option value="PM">PM</option>
+					</select>
+
+					<label class="add_rest_label">
+                		<span class="add_rest_span">Enter Restaurant LandLine Number <span class="asterisk">*</span></span> :
+    					<input
+    						type="tel"
+                			name="rest_landline_number"
+                			placeholder="Restaurant LandLine Number"
+                			required
+               			>
+               		</label>
+
+               		<label class="add_rest_label">
+                		<span class="add_rest_span">Enter Restaurant Mobile Number <span class="asterisk">*</span></span> :
+    					<input
+	    					type="tel"
+    	            		name="rest_mobile_number"
+            	    		placeholder="Restaurant Mobile Number"
+                			required
+               			>
+               		</label>
+
+               		<label class="add_rest_label">
+                		<span class="add_rest_span">Rate the Restaurant <span class="asterisk">*</span></span> :
+                	</label>
+
+               		<select name="rest_rating">
+						<option value="" disabled selected>Rating</option>
+						<option value="0">0 (Choose for Not Rated)</option>
+  						<option value="1">1</option>
+  						<option value="2">2</option>
+  						<option value="3">3</option>
+  						<option value="4">4</option>
+  						<option value="5">5</option>
+  						<option value="6">6</option>
+  						<option value="7">7</option>
+  						<option value="8">8</option>
+  						<option value="9">9</option>
+  						<option value="10">10</option>	
+					</select>
+
+					<label class="add_rest_label">
+                		<span class="add_rest_span">Tick the Services Available <span class="asterisk">*</span></span> :
+                	</label>
+
+					<label class="checkbox inline">
+  						<input type="checkbox" id="service_veg" name="service_veg" value="True"> Vegetarian
+					</label>
+					<label class="checkbox inline">
+  						<input type="checkbox" id="service_non_veg" name="service_non_veg" value="True"> Non-Vegetarian
+					</label>
+					<label class="checkbox inline">
+  						<input type="checkbox" id="service_home_delivery" name="service_home_delivery" value="True"> Home Delivery
+					</label>
+					<label class="checkbox inline">
+  						<input type="checkbox" id="service_cater" name="service_cater" value="True"> Catering
+					</label>
+					<label class="checkbox inline">
+  						<input type="checkbox" id="service_bar" name="service_bar" value="True"> Bar
+					</label>
+					<label class="checkbox inline">
+  						<input type="checkbox" id="service_menu" name="service_menu" value="True"> Menu
+					</label><br><br>
+
+					<button
+						type="submit"
+            	    	> Add Restaurant
+					</button>
+  				</fieldset>
+			</form>
+  		</div>
+  	</body>
+</html>

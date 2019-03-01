@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	
+	<package name="default" extends="json-default">
+		
+		<action name="sendContactMessage" class="com.fsp.action.UserContactFormA"> 
+			<interceptor-ref name="token"></interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<result name="add_contact_query_execute_status">JSP/ContactForm.jsp</result>
+			<result name="invalid.token">JSP/ContactForm.jsp</result>
+		</action>
+		
+		<action name="userRegister" class="com.fsp.action.UserRegistrationA">  
+			<result name="register_user_execute_status">JSP/CompleteRegistrationForm.jsp</result>
+		</action>
+		
+		<action name="login" class="com.fsp.action.LogInA">
+			<result name="success">JSP/HomePage.jsp</result>
+			<result name="error">JSP/CompleteLogInForm.jsp</result>
+		</action>
+		
+		<action name="searchRest" class="com.fsp.action.UserSearchRestaurantA">
+			<result name="search_rest_execute_status">JSP/RestaurantList.jsp</result>
+		</action>
+		
+		<action name="addRestaurantData" class="com.fsp.action.AddNewRestaurantDataA">
+			<result name="add_restaurant_execute_status">JSP/CityManagerAddRestaurant.jsp</result>
+		</action>
+	</package>
+</struts>

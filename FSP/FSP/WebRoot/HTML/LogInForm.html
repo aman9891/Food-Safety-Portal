@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+
+  	<body class="form_body">
+
+  		<!-- Login Form code starts -->
+
+  		<div class="form_meta_container">
+  			<div class="form_inner_container">
+  				<div class="login_form_container">
+
+  					<div class="form_header" id="form_header_login">
+  						<h3>LOG IN FORM</h3><hr>
+  					</div>
+
+  					<div id="formAlertNotVerified" class="alert alert-error hide">
+  						<a class="close">×</a>
+        				<strong>Email Id Not Verified!</strong> Please verify your account
+					</div>
+  					<div id="formAlertIncorrectPassword" class="alert alert-error hide">
+  						<a class="close">×</a>
+        				<strong>Incorrect Password!</strong> Please enter correct password
+					</div>
+  					<div id="formAlertNotRegistered" class="alert alert-error hide">
+  						<a class="close">×</a>
+        				<strong>Email Id Not Registered!</strong> Please register first
+					</div>
+					<div id="formAlertTechError" class="alert alert-error hide">
+  						<a class="close">×</a>
+        				<strong>Technical Error!</strong> Please try after sometime
+					</div>
+
+					<form method="post" action="login" name="login_form">
+	  					<div class="control-group">
+  							<div class="controls">
+    							<div class="input-prepend">
+      								<span class="add-on"><i class="icon-envelope icon-2x"></i></span>
+      								<input
+      									type="email"
+                        	    		name="login_email"
+                            			class="span5"
+                            			placeholder="Email"
+                            			required
+      								>
+    							</div>
+	  						</div>
+						</div>
+
+						<div class="control-group">
+  							<div class="controls">
+    							<div class="input-prepend">
+      								<span class="add-on"><i class="icon-lock icon-2x"></i></span>
+      								<input
+      									type="password"
+                        	    		name="login_password"
+                            			class="span5"
+                            			placeholder="Password"
+                            			pattern=".{5,20}"
+                            			title="Password must be 5 to 20 characters long"
+                            			required
+      								>
+    							</div>
+	  						</div>
+						</div>
+
+						<button
+							type="submit"
+            	    		name="login_submit"
+                			class="form_submit_button"
+                			id="login_form_submit_button">Log In
+						</button>
+
+						<div class="link_to_registration_form link_to_other_form">
+							New User ?<a class="pull-right right" href="JSP/CompleteRegistrationForm.jsp">Please Register !</a>
+						</div>
+
+						<div class="social-icon-container">
+  							<p class="connect-with"><strong>OR CONNECT WITH</strong></p>
+  							<a class="btn btn-primary btn-social" data-analytics="SignupFacebook"><i class="icon-facebook icon-2x">&nbsp|&nbsp</i><strong>Facebook</strong></a>
+  						</div>
+  					</form>	
+				</div>
+			</div>
+		</div>
+  	</body>
+</html>

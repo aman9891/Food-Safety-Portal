@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  	<head></head>
+
+  	<body>
+
+  		<!-- City Manager Modify Restaurant code starts -->
+
+  		<div id="search_rest_by_container">
+    		<table class="table">
+  				<thead><tr><th colspan="3">Select option to Search Restaurant : </th></tr></thead>
+  				<tbody>
+  					<tr>
+	  					<td><label class="radio"><input type="radio" name="searchBy" onchange='showSearchForm("reg_num")' value="reg_num"> By Registration Number</label></td>
+  						<td><label class="radio"><input type="radio" name="searchBy" onchange='showSearchForm("rest_name")' value="rest_name"> By Restaurant Name</label></td>
+  						<td><label class="radio"><input type="radio" name="searchBy" onchange='showSearchForm("by_city")' value="by_city"> By City</label></td>
+  					</tr>
+  				</tbody>
+    		</table>
+    	</div>
+
+  		<div id="cm_search_by_reg_num" style="display: none;">
+  			<p class="left">Enter Restaurant Registration Number : </p>
+  			<input type="text" id="cm_rest_reg_number" placeholder="Registration Number ...">
+  			<button type="button" onclick='showList()'> Submit </button>
+  		</div>
+
+  		<div id="cm_search_by_rest_name" style="display: none;">
+  			<p class="left">Enter Restaurant Name : </p>
+  			<input type="text" id="cm_rest_name" placeholder="Restaurant Name ...">
+  			<button type="button" onclick='showList()'> Submit </button>
+  		</div>
+
+  		<div id="cm_tabular_data" style="display: none;"></div>
+  	</body>
+</html>

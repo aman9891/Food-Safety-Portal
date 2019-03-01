@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+
+  	<body class="form_body">
+
+    	<!-- User Registration Form code starts  -->
+
+    	<div class="form_meta_container">
+  			<div class="form_inner_container">
+  				<div class="registration_form_container">
+
+  					<div class="form_header" id="form_header_registration">
+  						<h3>REGISTRATION FORM</h3><hr>
+  					</div>
+
+  					<div id="registrationFormAlertSuccess" class="alert alert-success hide">
+  						<a class="close">×</a>
+          				<strong>Successful Registration! Please check your Email</strong>
+					</div>
+
+    	    		<div id="registrationFormAlertTechError" class="alert alert-error hide">
+    	    			<a class="close">×</a>
+        				<strong>Technical Error! Please try after some time</strong>
+					</div>
+
+  					<div id="registrationFormAlertDupError" class="alert alert-error hide">
+  						<a class="close">×</a>
+        				<strong>Email already Registered! Try another</strong>
+					</div>
+
+  					<form method="post" action="userRegister" name="registration_form" onsubmit="disableButton()">
+	  					<div class="control-group">
+  							<div class="controls">
+    							<div class="input-prepend">
+      								<span class="add-on"><i class="icon-envelope icon-2x"></i></span>
+      								<input
+      									type="email"
+                        	    		name="user_registration_form_email"
+                            			class="span5"
+                            			placeholder="Email"
+                            			required
+      								>
+    							</div>
+	  						</div>
+						</div>
+
+						<div class="control-group">
+  							<div class="controls">
+    							<div class="input-prepend">
+      								<span class="add-on"><i class="icon-lock icon-2x"></i></span>
+      								<input
+      									type="password"
+                        	    		name="user_registration_form_password"
+                            			class="span5"
+                            			placeholder="Password"
+                            			pattern=".{5,20}"
+                            			title="Password must be 5 to 20 characters long"
+                            			required
+      								>
+    							</div>
+	  						</div>
+						</div>
+
+						<button
+							type="submit"
+            	    		name="user_registration_form_submit_button"
+                			class="form_submit_button"
+                			id="registration_form_submit_button">Sign Up
+						</button>
+
+						<div class="link_to_login_form link_to_other_form">
+							Already have an account ?<a class="pull-right right" href="JSP/CompleteLogInForm.jsp">Login !</a>
+						</div>
+
+						<div class="social-icon-container">
+  							<p class="connect-with"><strong>OR CONNECT WITH</strong></p>
+  							<a class="btn btn-primary btn-social" data-analytics="SignupFacebook"><i class="icon-facebook icon-2x">&nbsp|&nbsp</i><strong>Facebook</strong></a>
+  						</div>
+  					</form>	
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
